@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مطعم سبايسي فود | SPICY FOOD - طعم النار والأصالة</title>
+  
+  <!-- Meta description -->
+  <meta name="description" content="مطعم سبايسي فود - أشهى وجبات الفلافل، السندويشات، الزنكر، الريزو، البركر، الكنتاكي، والبيتزا بنكهات حارة ومقرمشة مع خدمة التوصيل السريع." />
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=logo-neon-2" />
+  
+  <!-- Favicon / Logo -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="brand-logo-wrap">
+        <img src="assets/logo.png" alt="شعار مطعم سبايسي فود" class="brand-logo-img" width="52" height="52" decoding="async" />
+        <div class="brand-title">
+          <span class="brand-name-ar">سبايسي <span class="highlight-red">فود</span> 🔥</span>
+          <span class="brand-slogan-mini">SPICY FOOD RESTAURANT</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#offers" class="nav-link">العروض الخاصة 🎁</a></li>
+          <li><a href="#menu" class="nav-link">قائمة الطعام 🍽️</a></li>
+          <li><a href="#delivery" class="nav-link">خدمة التوصيل 🛵</a></li>
+          <li><a href="#footer" class="nav-link">اتصل بنا 📞</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Cart & Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Cart Trigger Button -->
+        <button class="nav-cart-btn" onclick="toggleCartDrawer(true)" aria-label="عرض سلة المشتريات">
+          <div class="cart-icon-wrap">
+            <span>🛒</span>
+            <span class="cart-badge" id="cart-badge-count">0</span>
+          </div>
+          <span>السلة</span>
+          <span class="cart-btn-price" id="cart-btn-price">0 د.ع</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="القائمة">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-blob"></div>
+    <div class="hero-glow-blob-2"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Left / Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🌶️</span>
+            <span>طعم النار الحقيقي والأصالة العراقية</span>
+          </div>
+
+          <h1 class="hero-title">
+            أقوى النكهات <span class="text-gradient">السبايسي والمقرمشة</span> في مطعم سبايسي فود!
+          </h1>
+
+          <p class="hero-desc">
+            نقدم لكم ألذ لَفّات الفلافل العراقية، سندويشات الفلر والزنكر الخارقة، الريزو المدخن، البركر المشوي، الكنتاكي والبيتزا الحارة والمحضرة بأجود المكونات الطازجة يومياً.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn-primary">
+              <span>تصفح المنيو واطلب الآن 🍔</span>
+            </a>
+            <a href="#offers" class="btn-secondary">
+              <span>عروض التوفير النارية 🎁</span>
+            </a>
+          </div>
+
+          <!-- Hero Trust Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-icon">🛵</div>
+              <div class="stat-text">
+                <span class="stat-val">20 - 35 دقيقة</span>
+                <span class="stat-label">توصيل حار وسريع</span>
+              </div>
+            </div>
+            
+            <div class="stat-item">
+              <div class="stat-icon">🌶️</div>
+              <div class="stat-text">
+                <span class="stat-val">نكهة سبايسي 100%</span>
+                <span class="stat-label">خلطة الشعلة الخاصة</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon">⭐</div>
+              <div class="stat-text">
+                <span class="stat-val">أفضل الأسعار</span>
+                <span class="stat-label">تبدأ من 500 د.ع</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Circular restaurant logo with an animated neon halo -->
+        <div class="hero-visual">
+          <div class="hero-logo-stage">
+            <span class="logo-neon-ring" aria-hidden="true"></span>
+            <img src="assets/logo.png" alt="شعار مطعم سبايسي فود الدائري" class="hero-logo-large" width="1254" height="1254" decoding="async" fetchpriority="high" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SPECIAL OFFERS SECTION (قسم العروض الترويجية)
+       ========================================================================= -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">🔥 أقوى التخفيضات والبوكسات</span>
+        <h2 class="section-title">قسم العروض <span class="text-gradient">الخاصة والكومبو</span></h2>
+        <p class="section-desc">وفر أكثر مع بوكسات سبايسي فود المليئة بالوجبات المشبعة والصوصات اللذيذة.</p>
+      </div>
+
+      <!-- Dynamic Offers Container -->
+      <div class="offers-grid" id="offers-container">
+        <!-- Rendered via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. MENU SECTION (قائمة الطعام الكاملة مع العدادات الذكية)
+       ========================================================================= -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-subtitle">🍽️ مذاق لا يُقاوم</span>
+        <h2 class="section-title">قائمة الطعام <span class="text-gradient">والوجبات الساخنة</span></h2>
+        <p class="section-desc">اختر عدد الوجبات التي ترغب بها وشاهد السعر يرتفع تلقائياً ثم أضفها إلى السلة بضغطة زر واحدة!</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="menu-filter-wrapper">
+        
+        <!-- Live Search Input -->
+        <div class="search-box-wrap">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="menu-search-input" 
+            placeholder="ابحث عن وجبتك المفضلة (فلافل، زنكر، ريزو، بركر، بيتزا...)" 
+          />
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="all">
+            <span>🔥</span><span>الكل</span>
+          </button>
+          <button class="category-tab" data-category="falafel">
+            <span>🌯</span><span>فلافل</span>
+          </button>
+          <button class="category-tab" data-category="sandwiches">
+            <span>🥪</span><span>سندويشات</span>
+          </button>
+          <button class="category-tab" data-category="rizo">
+            <span>🍚</span><span>ريزو</span>
+          </button>
+          <button class="category-tab" data-category="burgers">
+            <span>🍔</span><span>بركر</span>
+          </button>
+          <button class="category-tab" data-category="kentucky">
+            <span>🍗</span><span>كنتاكي وكريسبي</span>
+          </button>
+          <button class="category-tab" data-category="pizza">
+            <span>🍕</span><span>بيتزا</span>
+          </button>
+          <button class="category-tab" data-category="drinks">
+            <span>🥤</span><span>مشروبات</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Food Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. DELIVERY SERVICE SECTION (قسم خدمة التوصيل السريع)
+       ========================================================================= -->
+  <section class="delivery-section" id="delivery">
+    <div class="container">
+      <div class="delivery-card-banner">
+        
+        <div>
+          <span class="hero-badge">🛵 أسرع توصيل في المنطقة</span>
+          <h2 style="font-size: 2.1rem; font-weight: 900; margin: 12px 0; color: #fff;">
+            خدمة التوصيل السريع لجميع مناطق المدينة
+          </h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            تصلكم وجباتكم طازجة وساخنة مع تغليف حراري محكم يحافظ على القرمشة والحرارة والنكهة الأصلية حتى باب منزلكم أو مكان عملكم.
+          </p>
+
+          <div class="delivery-features">
+            <div class="del-feat">
+              <span class="del-feat-icon">⚡</span>
+              <div>
+                <h4>توصيل فائق السرعة</h4>
+                <p>معدل وصول 25 دقيقة فقط</p>
+              </div>
+            </div>
+
+            <div class="del-feat">
+              <span class="del-feat-icon">📦</span>
+              <div>
+                <h4>تغليف حراري مميز</h4>
+                <p>يحفظ قرمشة وسخونة الوجبة</p>
+              </div>
+            </div>
+
+            <div class="del-feat">
+              <span class="del-feat-icon">💳</span>
+              <div>
+                <h4>دفع عند الاستلام</h4>
+                <p>نقداً بالدينار العراقي</p>
+              </div>
+            </div>
+
+            <div class="del-feat">
+              <span class="del-feat-icon">💬</span>
+              <div>
+                <h4>متابعة الطلب عبر واتساب</h4>
+                <p>إشعارات مباشرة لحالة الطلب</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Order Box -->
+        <div class="delivery-map-card">
+          <div style="font-size: 3rem; margin-bottom: 8px;">🔥</div>
+          <h3 style="color: #fff; font-size: 1.4rem; font-weight: 800;">جاهزون لخدمتكم يومياً</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 6px;">
+            من الساعة 11:00 صباحاً حتى 2:00 بعد منتصف الليل
+          </p>
+          
+          <span class="del-hotline">0770 000 0000</span>
+          
+          <button class="btn-primary" onclick="toggleCartDrawer(true)" style="width: 100%;">
+            <span>اطلب وجبتك الآن 🛵</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CART DRAWER & SLIDEOUT
+       ========================================================================= -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCartDrawer(false)"></div>
+  
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <span>🛒</span>
+        <span>سلة المشتريات</span>
+      </div>
+      <button class="cart-close-btn" onclick="toggleCartDrawer(false)" aria-label="إغلاق السلة">✕</button>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Dynamic list from app.js -->
+    </div>
+
+    <!-- Cart Footer & Actions -->
+    <div class="cart-footer">
+      <div class="cart-summary-line">
+        <span>مجموع الوجبات:</span>
+        <span id="cart-subtotal">0 د.ع</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>أجور التوصيل:</span>
+        <span id="cart-delivery-fee">1,000 د.ع</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>الإجمالي النهائي:</span>
+        <span class="total-amount" id="cart-grand-total">0 د.ع</span>
+      </div>
+
+      <div class="cart-checkout-actions">
+        <button class="btn-primary" onclick="openCheckoutModal()" style="width: 100%;">
+          <span>إتمام الطلب وتأكيد التوصيل 🛵</span>
+        </button>
+        <button class="btn-view-invoice" onclick="clearCart()">
+          <span>تفريغ السلة 🗑️</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       7. CHECKOUT MODAL (نموذج إدخال بيانات الزبون وواتساب)
+       ========================================================================= -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <span>🛵</span>
+          <span>بيانات التوصيل وإرسال الطلب</span>
+        </h3>
+        <button class="cart-close-btn" onclick="closeCheckoutModal()">✕</button>
+      </div>
+
+      <form id="order-checkout-form" onsubmit="submitOrderToWhatsApp(event)">
+        <div class="form-group">
+          <label class="form-label" for="cust-name">الاسم الكامل *</label>
+          <input type="text" id="cust-name" class="form-input" placeholder="مثال: أحمد علي" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cust-phone">رقم الهاتف (للتواصل والتوصيل) *</label>
+          <input type="tel" id="cust-phone" class="form-input" placeholder="0770XXXXXXX" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cust-area">العنوان التفصيلي / المنطقة وأقرب نقطة دالة *</label>
+          <input type="text" id="cust-area" class="form-input" placeholder="المنطقة، الشارع، قرب..." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cust-notes">ملاحظات إضافية على الوجبة (اختياري)</label>
+          <textarea id="cust-notes" class="form-textarea" rows="2" placeholder="مثال: صوص إضافي، بدون طماطم، حار جداً..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-whatsapp-order" style="width: 100%; margin-top: 10px;">
+          <span>💬 إرسال الطلب إلى واتساب المطعم مباشرة</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       8. RECEIPT / INVOICE MODAL (الفاتورة الإلكترونية الرقمية)
+       ========================================================================= -->
+  <div class="modal-overlay" id="receipt-modal">
+    <div class="modal-content" id="receipt-body">
+      <!-- Receipt content inserted via app.js -->
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div class="brand-logo-wrap">
+            <img src="assets/logo.png" alt="سبايسي فود" class="brand-logo-img" width="52" height="52" decoding="async" />
+            <div class="brand-title">
+              <span class="brand-name-ar">سبايسي <span class="highlight-red">فود</span></span>
+              <span class="brand-slogan-mini">SPICY FOOD RESTAURANT</span>
+            </div>
+          </div>
+          <p>
+            المطعم الأول المتخصص في تقديم أشهى الأطباق المقرمشة والسبايسي بنكهات عراقية وعالمية فريدة مع أسرع خدمة توصيل.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">الصفحة الرئيسية</a></li>
+            <li><a href="#offers">العروض الخاصة</a></li>
+            <li><a href="#menu">قائمة الطعام</a></li>
+            <li><a href="#delivery">خدمة التوصيل</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4>أقسام المنيو</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">فلافل عراقية</a></li>
+            <li><a href="#menu">سندويشات وزنكر</a></li>
+            <li><a href="#menu">ريزو ودجاج مقرمش</a></li>
+            <li><a href="#menu">بركر وبيتزا سبايسي</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul class="footer-links">
+            <li>📍 الدسيم - الفرع الرئيسي</li>
+            <li>📞 الهاتف: 07762193552</li>
+            <li>🕒 الدوام: 11:00 ص - 2:00 ليلاً</li>
+            <li>💬 خدمة الزبائن متاحة 24/7 عبر واتساب</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © 2026 لمطعم <strong>سبايسي فود (Spicy Food)</strong> | صُمم بأعلى معايير الإتقان والأناقة 🔥</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- App Script -->
+  <script src="app.js?v=logo-neon-2"></script>
+</body>
+</html>
